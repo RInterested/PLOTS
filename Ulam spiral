@@ -1,0 +1,45 @@
+spiral <- function(R){
+  spiral <- 0 + 0i
+    for (r in 1:R){
+      corner = r - 1i * r 
+      side_len = 2 * r
+      current_pos = corner
+        for (dir in c(1i, -1, -1i, 1)){
+          for (step in seq(side_len)){
+            current_pos <- current_pos + dir
+            spiral <- c(spiral, current_pos)
+          }
+        }
+    }
+  spiral
+} 
+
+
+get_primes <- function(n_min, n_max){
+  options(scipen=999)
+  result = vector()
+  for (x in seq(max(n_min,2), n_max)){
+    has_factor <- F
+    for (p in seq(2, ceiling(sqrt(x)))){
+      if(x %% p == 0) has_factor <- T
+      if(has_factor == T) break
+    }
+    if(has_factor==F) result <- c(result,x)
+  }
+  result
+}
+
+
+
+n = 120
+sp = spiral(n)
+length(sp)
+int = 1: length(sp)
+prime = get_primes(1,length(sp))
+dat = data.frame(int,sp)
+
+ulnam = dat[dat$int %in% prime,]
+par(mar=c(.1,.1,.1,.1))
+plot(ulnam$sp, asp=1, pch=19, cex=.01, 
+     axes=F, xlab="", ylab="NULL", col="slateblue4")
+
