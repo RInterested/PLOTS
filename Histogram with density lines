@@ -1,3 +1,5 @@
+# UNLESS THE hist() call includes prob = T THIS WILL NOT WORK WELL!
+
 # Copy and paste for an example:
 
 x1 = 5
