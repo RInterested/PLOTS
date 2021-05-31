@@ -1,0 +1,31 @@
+# CREATE YOUR OWN TICKS:
+
+x <- seq(-2.5,2.5,0.01)
+y <- dnorm(x)
+plot(x,y, type='l', lwd = 3, col = "gray50", xaxt = "n")
+axis(1, at = seq(-2.5,2.5,0.5))
+
+# SELECTING SIZE OF THE TICKS:
+
+Use the option tck = -.01, for example, as in:
+
+qqnorm(sample, pch=19, cex.main = .9, cex.lab = .5, cex.axis =.4, tck = -.01, col='orange')
+
+
+# SELECTING THE SIZE OF THE TICK LABELS (THE NUMBERS IN THE x AND y AXIS):
+
+The option is cex.axis = .4, for example
+
+# SELECTING THE DISTANCE BETWEEN THE TICKS AND THE TICK LABELS:
+
+Its the second option in the so-called mpg par option (in the example below, 0.2):
+
+par(mgp=c(1,0.2,0))
+qqnorm(sample, pch=19, cex.main = .9, cex.lab = .5, cex.axis =.4, tck = -.01, col='orange')
+
+# SELECTING THE DISTANCE BETWEEN THE TICKS AND ITS LABELS TO THE AXIS LABELS:
+
+This is the first option in the mpg par option (in the example, 1):
+
+par(mgp=c(1,0.2,0))
+qqnorm(sample, pch=19, cex.main = .9, cex.lab = .5, cex.axis =.4, tck = -.01, col='orange')

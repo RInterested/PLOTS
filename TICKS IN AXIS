@@ -1,4 +1,0 @@
-x <- seq(-2.5,2.5,0.01)
-y <- dnorm(x)
-plot(x,y, type='l', lwd = 3, col = "gray50", xaxt = "n")
-axis(1, at = seq(-2.5,2.5,0.5))
