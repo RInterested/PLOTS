@@ -29,3 +29,16 @@ This is the first option in the mpg par option (in the example, 1):
 
 par(mgp=c(1,0.2,0))
 qqnorm(sample, pch=19, cex.main = .9, cex.lab = .5, cex.axis =.4, tck = -.01, col='orange')
+
+
+The `first` value in `mgp` is where your `axis labels` moves either close to or far from axis, less value means closer to axis and 
+high value means far from axis on both the axis i.e. x and y axis.
+
+The `second` value in `mgp` is where your `tick labels` moves either close to or far from ticks, less value means closer to tick and 
+high value means far from ticks on both the axis i.e. x and y axis.
+
+The `third` value in `mgp` is where your `ticks` moves either close to or far from axis line itself, less value means closer to axis line 
+and high value means far from axis line on both the axis, i.e. x and y. 
+
+`mar` is a numerical vector of the form `c(bottom, left, top, right)` which gives the number of lines of margin to be specified on the four sides of the plot. 
+The default is `c(5, 4, 4, 2) + 0.1`.
