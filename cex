@@ -1,0 +1,24 @@
+cex.main = .9  SIZE OF THE TITLE OF THE PLOT
+cex.lab = .5   FONT SIZE FOR THE AXIS LABELS (NAMES X AND Y AXES).
+cex.axis =.4   FONT SIZE FOR THE TICK LABELS (NUMBERS IN X AND Y AXES).
+tck = -.01     SIZE OF THE ACTUAL TICK MARKS
+
+Related, the actual relative position of the labels and ticks can be specified before calling the plot with:
+
+par(mgp=c(1,0.2,0))
+
+The first value is where your axis labels moves either close to or far from axis, 
+less value means closer to axis and high value means far from axis on both the axis i.e. x and y axis.
+
+The second value is where your tick labels moves either close to or far from ticks, 
+less value means closer to tick and high value means far from ticks on both the axis i.e. x and y axis.
+
+The third value is where your ticks moves either close to or far from axis line itself, 
+less value means closer to axis line and high value means far from axis line on both the axis, i.e. x and y.
+
+The margins of the image can be changed with
+
+mar is a numerical vector of the form c(bottom, left, top, right) which gives the number of lines of margin to be specified on the four sides of the plot. 
+The default is c(5, 4, 4, 2) + 0.1.
+
+From this post: https://stackoverflow.com/a/38935883/4089351
