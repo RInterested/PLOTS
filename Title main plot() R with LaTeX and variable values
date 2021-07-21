@@ -1,0 +1,4 @@
+# From https://trinkerrstuff.wordpress.com/2018/03/15/2246/
+
+cor <- -.321
+plot(1:10, 1:10, main = bquote("Hello" ~ r[xy] == .(cor) ~ "and" ~ B^2))
